@@ -1,281 +1,389 @@
-'use client'
-import { useState } from 'react'
-import { createClient } from '@supabase/supabase-js'
-import PageLayout from '../../components/PageLayout'
+'use client';
+import { useState } from 'react';
+import { supabase } from '../../lib/supabase';
+import { useRouter } from 'next/navigation';
+import Navigation from '../../components/Navigation';
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-)
+export default function Login() {
+  const [isLogin, setIsLogin] = useState(true);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState('');
+  const router = useRouter();
 
-export default function LoginPage() {
-  const [isLogin, setIsLogin] = useState(false) // Start with registration
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [loading, setLoading] = useState(false)
-  const [message, setMessage] = useState('')
-  const [error, setError] = useState('')
-
-  const handleSignUp = async (e) => {
-    e.preventDefault()
-    setLoading(true)
-    setError('')
-    setMessage('')
+  const handleAuth = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setMessage('');
 
     try {
-      console.log('Starting registration...')
-      
-      const { data, error } = await supabase.auth.signUp({
-        email: email,
-        password: password
-      })
+      if (isLogin) {
+        const { data, error } = await supabase.auth.signInWithPassword({
+          email,
+          password,
+        });
 
-      console.log('Registration result:', { data, error })
+        if (error) throw error;
 
-      if (error) {
-        throw error
-      }
-
-      if (data?.user) {
-        // Try to add user info to family_members table
-        try {
-          const { data: memberData, error: memberError } = await supabase
-            .from('family_members')
-            .insert([
-              {
-                user_id: data.user.id,
-                first_name: firstName,
-                last_name: lastName,
-                email: email
-              }
-            ])
-            .select()
-
-          console.log('Member data insert:', { memberData, memberError })
-        } catch (memberErr) {
-          console.log('Member insert failed, but registration succeeded:', memberErr)
+        if (data.user) {
+          setMessage('Login successful! Redirecting to dashboard...');
+          setTimeout(() => {
+            router.push('/dashboard');
+          }, 1000);
         }
+      } else {
+        // Registration mode
+        console.log('Starting registration process...');
+        const { data, error } = await supabase.auth.signUp({
+          email,
+          password,
+        });
 
-        setMessage('Registration successful! You can now sign in.')
-        // Clear form and switch to login
-        setEmail('')
-        setPassword('')
-        setFirstName('')
-        setLastName('')
-        setIsLogin(true)
+        if (error) throw error;
+
+        if (data.user) {
+          console.log('User created successfully:', data.user.id);
+          console.log('Attempting to create profile via API...');
+          
+          // Create user profile using API route with service role
+          try {
+            const profileData = {
+              user_id: data.user.id,
+              first_name: firstName.trim(),
+              last_name: lastName.trim(),
+              email: email.trim(),
+              created_at: new Date().toISOString()
+            };
+
+            console.log('Profile data to send to API:', profileData);
+
+            const response = await fetch('/api/create-profile', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(profileData),
+            });
+
+            const result = await response.json();
+            console.log('API Response:', result);
+
+            if (response.ok && result.success) {
+              console.log('Profile created successfully via API');
+              setMessage('Registration successful! Please check your email to confirm your account.');
+            } else {
+              console.error('Profile creation failed via API:', result.error);
+              setMessage('Account created successfully, but there was an issue saving your profile. Please contact support.');
+            }
+          } catch (profileCatchError) {
+            console.error('Profile creation API call error:', profileCatchError);
+            setMessage('Account created successfully, but there was an issue saving your profile. Please contact support.');
+          }
+        }
       }
     } catch (error) {
-      console.error('Registration error:', error)
-      setError(error.message || 'Registration failed')
+      console.error('Auth error:', error);
+      setMessage(error.message);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
-
-  const handleSignIn = async (e) => {
-    e.preventDefault()
-    setLoading(true)
-    setError('')
-    setMessage('')
-
-    try {
-      const { data, error } = await supabase.auth.signInWithPassword({
-        email: email,
-        password: password
-      })
-
-      if (error) throw error
-
-      if (data?.user) {
-        setMessage('Login successful!')
-        // You can redirect to dashboard here later
-      }
-    } catch (error) {
-      console.error('Login error:', error)
-      setError(error.message || 'Login failed')
-    } finally {
-      setLoading(false)
-    }
-  }
+  };
 
   return (
-    <PageLayout>
-      <div style={{
-        background: 'linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%)',
-        minHeight: '100vh',
-        padding: '40px 20px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
+    <div style={{ 
+      minHeight: '100vh', 
+      backgroundColor: '#f0f2f5',
+      display: 'flex',
+      flexDirection: 'column'
+    }}>
+      <Navigation />
+      
+      <div style={{ 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'center', 
+        padding: '48px 16px',
+        paddingTop: '100px',
+        flex: 1
       }}>
-        <div style={{
-          background: 'white',
-          borderRadius: '16px',
-          boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
-          padding: '40px',
+        <div style={{ 
+          maxWidth: '480px', 
           width: '100%',
-          maxWidth: '500px'
+          backgroundColor: 'white',
+          borderRadius: '16px',
+          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
+          padding: '48px 40px',
+          border: '1px solid rgba(255, 255, 255, 0.2)'
         }}>
-          <h1 style={{ 
-            textAlign: 'center', 
-            marginBottom: '30px',
-            fontSize: '28px',
-            color: '#1a202c'
-          }}>
-            {isLogin ? 'Sign In' : 'Create Account'}
-          </h1>
-
-          <form onSubmit={isLogin ? handleSignIn : handleSignUp}>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <h2 style={{ 
+              fontSize: '32px', 
+              fontWeight: '600', 
+              color: '#333333',
+              marginBottom: '12px',
+              letterSpacing: '-0.5px'
+            }}>
+              {isLogin ? 'Sign In' : 'Create Account'}
+            </h2>
+            <p style={{ 
+              color: '#666666', 
+              fontSize: '16px',
+              margin: 0
+            }}>
+              {isLogin 
+                ? 'Access the Harrison Family Heritage portal' 
+                : 'Join the Harrison Family Heritage community'
+              }
+            </p>
+          </div>
+          
+          <form onSubmit={handleAuth} style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
             {!isLogin && (
-              <>
-                <div style={{ marginBottom: '20px' }}>
-                  <label style={{ display: 'block', marginBottom: '5px', fontWeight: '600' }}>
+              <div style={{ display: 'flex', gap: '16px' }}>
+                <div style={{ flex: 1 }}>
+                  <label htmlFor="firstName" style={{ 
+                    display: 'block', 
+                    fontSize: '15px', 
+                    fontWeight: '500', 
+                    color: '#374151',
+                    marginBottom: '8px'
+                  }}>
                     First Name
                   </label>
                   <input
+                    id="firstName"
+                    name="firstName"
                     type="text"
+                    required={!isLogin}
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
-                    required
                     style={{
                       width: '100%',
-                      padding: '12px',
-                      border: '2px solid #e2e8f0',
-                      borderRadius: '8px',
-                      fontSize: '16px',
-                      boxSizing: 'border-box'
+                      padding: '14px 16px',
+                      border: '2px solid #e5e7eb',
+                      borderRadius: '12px',
+                      fontSize: '15px',
+                      boxSizing: 'border-box',
+                      transition: 'all 0.2s ease',
+                      backgroundColor: '#fafafa'
                     }}
+                    onFocus={(e) => {
+                      e.target.style.borderColor = '#6366f1';
+                      e.target.style.backgroundColor = '#ffffff';
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.borderColor = '#e5e7eb';
+                      e.target.style.backgroundColor = '#fafafa';
+                    }}
+                    placeholder="Enter your first name"
                   />
                 </div>
-
-                <div style={{ marginBottom: '20px' }}>
-                  <label style={{ display: 'block', marginBottom: '5px', fontWeight: '600' }}>
+                <div style={{ flex: 1 }}>
+                  <label htmlFor="lastName" style={{ 
+                    display: 'block', 
+                    fontSize: '15px', 
+                    fontWeight: '500', 
+                    color: '#374151',
+                    marginBottom: '8px'
+                  }}>
                     Last Name
                   </label>
                   <input
+                    id="lastName"
+                    name="lastName"
                     type="text"
+                    required={!isLogin}
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
-                    required
                     style={{
                       width: '100%',
-                      padding: '12px',
-                      border: '2px solid #e2e8f0',
-                      borderRadius: '8px',
-                      fontSize: '16px',
-                      boxSizing: 'border-box'
+                      padding: '14px 16px',
+                      border: '2px solid #e5e7eb',
+                      borderRadius: '12px',
+                      fontSize: '15px',
+                      boxSizing: 'border-box',
+                      transition: 'all 0.2s ease',
+                      backgroundColor: '#fafafa'
                     }}
+                    onFocus={(e) => {
+                      e.target.style.borderColor = '#6366f1';
+                      e.target.style.backgroundColor = '#ffffff';
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.borderColor = '#e5e7eb';
+                      e.target.style.backgroundColor = '#fafafa';
+                    }}
+                    placeholder="Enter your last name"
                   />
                 </div>
-              </>
+              </div>
             )}
 
-            <div style={{ marginBottom: '20px' }}>
-              <label style={{ display: 'block', marginBottom: '5px', fontWeight: '600' }}>
+            <div>
+              <label htmlFor="email" style={{ 
+                display: 'block', 
+                fontSize: '15px', 
+                fontWeight: '500', 
+                color: '#374151',
+                marginBottom: '8px'
+              }}>
                 Email
               </label>
               <input
+                id="email"
+                name="email"
                 type="email"
+                required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                required
                 style={{
                   width: '100%',
-                  padding: '12px',
-                  border: '2px solid #e2e8f0',
-                  borderRadius: '8px',
-                  fontSize: '16px',
-                  boxSizing: 'border-box'
+                  padding: '14px 16px',
+                  border: '2px solid #e5e7eb',
+                  borderRadius: '12px',
+                  fontSize: '15px',
+                  boxSizing: 'border-box',
+                  transition: 'all 0.2s ease',
+                  backgroundColor: '#fafafa'
                 }}
+                onFocus={(e) => {
+                  e.target.style.borderColor = '#6366f1';
+                  e.target.style.backgroundColor = '#ffffff';
+                }}
+                onBlur={(e) => {
+                  e.target.style.borderColor = '#e5e7eb';
+                  e.target.style.backgroundColor = '#fafafa';
+                }}
+                placeholder="Enter your email"
               />
             </div>
 
-            <div style={{ marginBottom: '24px' }}>
-              <label style={{ display: 'block', marginBottom: '5px', fontWeight: '600' }}>
+            <div>
+              <label htmlFor="password" style={{ 
+                display: 'block', 
+                fontSize: '15px', 
+                fontWeight: '500', 
+                color: '#374151',
+                marginBottom: '8px'
+              }}>
                 Password
               </label>
               <input
+                id="password"
+                name="password"
                 type="password"
+                required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                required
-                minLength={6}
                 style={{
                   width: '100%',
-                  padding: '12px',
-                  border: '2px solid #e2e8f0',
-                  borderRadius: '8px',
-                  fontSize: '16px',
-                  boxSizing: 'border-box'
+                  padding: '14px 16px',
+                  border: '2px solid #e5e7eb',
+                  borderRadius: '12px',
+                  fontSize: '15px',
+                  boxSizing: 'border-box',
+                  transition: 'all 0.2s ease',
+                  backgroundColor: '#fafafa'
                 }}
+                onFocus={(e) => {
+                  e.target.style.borderColor = '#6366f1';
+                  e.target.style.backgroundColor = '#ffffff';
+                }}
+                onBlur={(e) => {
+                  e.target.style.borderColor = '#e5e7eb';
+                  e.target.style.backgroundColor = '#fafafa';
+                }}
+                placeholder="Enter your password"
               />
             </div>
-
-            {error && (
-              <div style={{
-                background: '#fed7d7',
-                color: '#c53030',
-                padding: '12px',
-                borderRadius: '8px',
-                marginBottom: '20px',
-                fontSize: '14px'
-              }}>
-                {error}
-              </div>
-            )}
-
-            {message && (
-              <div style={{
-                background: '#c6f6d5',
-                color: '#22543d',
-                padding: '12px',
-                borderRadius: '8px',
-                marginBottom: '20px',
-                fontSize: '14px'
-              }}>
-                {message}
-              </div>
-            )}
 
             <button
               type="submit"
               disabled={loading}
               style={{
                 width: '100%',
-                background: loading ? '#a0aec0' : '#4c51bf',
-                color: 'white',
-                padding: '14px',
-                borderRadius: '8px',
+                padding: '16px',
                 border: 'none',
                 fontSize: '16px',
                 fontWeight: '600',
-                cursor: loading ? 'not-allowed' : 'pointer'
+                borderRadius: '12px',
+                color: 'white',
+                background: loading 
+                  ? '#9ca3af' 
+                  : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                cursor: loading ? 'not-allowed' : 'pointer',
+                transition: 'all 0.3s ease',
+                transform: loading ? 'none' : 'translateY(0)',
+                boxShadow: loading 
+                  ? 'none' 
+                  : '0 4px 16px rgba(102, 126, 234, 0.4)',
+                marginTop: '8px'
+              }}
+              onMouseEnter={(e) => {
+                if (!loading) {
+                  e.target.style.transform = 'translateY(-2px)';
+                  e.target.style.boxShadow = '0 8px 24px rgba(102, 126, 234, 0.5)';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (!loading) {
+                  e.target.style.transform = 'translateY(0)';
+                  e.target.style.boxShadow = '0 4px 16px rgba(102, 126, 234, 0.4)';
+                }
               }}
             >
-              {loading ? 'Please wait...' : (isLogin ? 'Sign In' : 'Create Account')}
+              {loading ? 'Processing...' : (isLogin ? 'Sign In' : 'Create Account')}
             </button>
-          </form>
 
-          <div style={{ textAlign: 'center', marginTop: '20px' }}>
-            <span
-              onClick={() => {
-                setIsLogin(!isLogin)
-                setError('')
-                setMessage('')
-              }}
-              style={{
-                color: '#4c51bf',
-                cursor: 'pointer',
-                textDecoration: 'underline'
-              }}
-            >
-              {isLogin ? 'Need an account? Sign up' : 'Already have an account? Sign in'}
-            </span>
-          </div>
+            <div style={{ textAlign: 'center', marginTop: '8px' }}>
+              <button
+                type="button"
+                onClick={() => {
+                  setIsLogin(!isLogin);
+                  setMessage('');
+                  setFirstName('');
+                  setLastName('');
+                }}
+                style={{
+                  color: '#6366f1',
+                  fontSize: '15px',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  textDecoration: 'none',
+                  fontWeight: '500',
+                  transition: 'color 0.2s ease'
+                }}
+                onMouseEnter={(e) => e.target.style.textDecoration = 'underline'}
+                onMouseLeave={(e) => e.target.style.textDecoration = 'none'}
+              >
+                {isLogin ? "Don't have an account? Sign up" : "Already have an account? Sign in"}
+              </button>
+            </div>
+
+            {message && (
+              <div style={{
+                padding: '16px',
+                borderRadius: '12px',
+                fontSize: '14px',
+                marginTop: '8px',
+                backgroundColor: message.includes('successful') || message.includes('check your email')
+                  ? '#f0f9ff' : '#fef2f2',
+                color: message.includes('successful') || message.includes('check your email')
+                  ? '#0369a1' : '#dc2626',
+                border: `2px solid ${message.includes('successful') || message.includes('check your email')
+                  ? '#bae6fd' : '#fecaca'}`,
+                fontWeight: '500'
+              }}>
+                {message}
+              </div>
+            )}
+          </form>
         </div>
       </div>
-    </PageLayout>
-  )
+    </div>
+  );
 }
