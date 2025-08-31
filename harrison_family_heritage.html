@@ -1,1 +1,2029 @@
+<!DOCTYPE html>
+<!-- saved from url=(0150)https://gensparkpublicblob.blob.core.windows.net/user-upload-image/page/tooluse_f94ZxF7YQDe_j0-HAfrtmg/harrison_family_heritage_improved_contrast.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harrison Family Heritage - Family Tree &amp; Genealogy</title>
+    <link href="./harrison_family_heritage_files/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./harrison_family_heritage_files/all.min.css">
+    <link href="./harrison_family_heritage_files/css2" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            min-height: 100vh;
+        }
+
+        .scripture-bar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 0;
+            text-align: center;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .scripture-bar a {
+            color: #e2e8f0;
+            text-decoration: underline;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2d5a27;
+        }
+
+        .logo i {
+            margin-right: 0.5rem;
+            color: #48bb78;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-item {
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border: 2px solid #e2e8f0;
+            border-radius: 25px;
+            color: #2d3748;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-item:hover {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            color: white;
+            border-color: #38a169;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 50%, #f7fafc 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(72, 187, 120, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(56, 161, 105, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(104, 211, 145, 0.06) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #2d5a27;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #4a5568;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #2d5a27;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 600;
+        }
+
+        .family-tree-container {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .generation-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #553c9a;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .family-member-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 2px solid #e2e8f7;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+        }
+
+        .family-member-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(72, 187, 120, 0.15);
+            border-color: #48bb78;
+        }
+
+        .family-member-card.expandable {
+            border-left: 4px solid #48bb78;
+        }
+
+        .family-member-card.expanded {
+            background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 100%);
+            border-color: #38a169;
+        }
+
+        .member-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2d5a27;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-details {
+            color: #4a5568;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .children-section {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #e2e8f7;
+            background: rgba(240, 255, 244, 0.3);
+            border-radius: 10px;
+            padding: 1.5rem;
+        }
+
+        .children-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .child-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #d4edda;
+            border-radius: 10px;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .child-name {
+            font-weight: 600;
+            color: #2d5a27;
+            margin-bottom: 0.25rem;
+        }
+
+        .child-details {
+            color: #4a5568;
+            line-height: 1.4;
+        }
+
+        .founding-generation {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .second-generation {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .expand-icon {
+            float: right;
+            color: #48bb78;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .family-member-card.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .gallery-section {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .photo-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .photo-placeholder {
+            height: 200px;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 3rem;
+        }
+
+        .photo-caption {
+            padding: 1rem;
+            color: #4a5568;
+        }
+
+        .instruction-box {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border: 1px solid #f59e0b;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .instruction-title {
+            font-weight: 600;
+            color: #92400e;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .instruction-title i {
+            margin-right: 0.5rem;
+        }
+
+        .instruction-steps {
+            color: #78350f;
+            line-height: 1.6;
+        }
+
+        .directory-section, .history-section {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .member-benefit {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border: 1px solid #10b981;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .benefit-title {
+            font-weight: 600;
+            color: #065f46;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .benefit-title i {
+            margin-right: 0.5rem;
+            color: #10b981;
+        }
+
+        .login-section {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .login-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #2d3748;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #48bb78;
+            box-shadow: 0 0 0 3px rgba(72, 187, 120, 0.1);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .nav-menu {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            
+            .nav-item {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+<style>
+    .genspark-notice-dialog {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 10001;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .genspark-notice-content {
+      background-color: white;
+      border-radius: 8px;
+      max-width: 600px;
+      width: 90%;
+      box-sizing: border-box;
+      padding: 10px 30px 30px 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+    }
+
+    .genspark-notice-title {
+      color: #000;
+      font-family: Arial;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%; 
+    }
+
+    .genspark-notice-list {
+      margin: 24px 0;
+      
+      color: #606366;
+      font-family: Arial;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-left: 12px;
+    }
+
+    .genspark-notice-list li {
+      margin-bottom: 12px;
+      list-style-type: disc;
+    }
+
+    .genspark-notice-list li a {
+      color: #606366;
+      text-decoration: underline;
+    }
+
+    .genspark-notice-checkbox {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      gap: 10px;
+
+      color: #232425;
+
+      font-family: Arial;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .genspark-notice-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+      
+    .genspark-notice-ok {
+      color: #232425;
+
+      text-align: center;
+      font-family: Arial;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%; 
+
+      cursor: pointer;
+      display: flex;
+      height: 40px;
+      padding: 6px 14px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      border-radius: 8px;
+      border: 1px solid #000;
+      box-sizing: border-box;
+      width: 100%;
+    }
+  </style><style>
+            .toast {
+                display: flex !important; /* Change to flex and add !important */
+                all: initial;
+                flex-direction: row !important;
+                align-items: center !important; /* Center vertically and add !important */
+                background: rgba(255, 255, 255, 0.1);
+                color: #fff;
+                padding: 20px 30px;
+                margin-bottom: 15px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                backdrop-filter: blur(10px);
+                opacity: 0;
+
+                max-width: 500px; /* Set a max-width */
+                transition: opacity 0.5s ease-in-out;
+                font-size: 18px;
+                position: relative; /* For gradient overlay */
+
+                font-family: 'Open Sans', sans-serif; /* Apply Open Sans font */
+            }
+            .toast.show {
+                opacity: 1;
+            }
+            .toast.info::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(45deg, #020024, #090979, #00d4ff);
+                opacity: 0.6; /* Adjust opacity for glassmorphic effect */
+                border-radius: 10px;
+                z-index: -1; /* Place behind the content */
+            }
+            .toast.error {
+                background: rgba(244, 67, 54, 0.8) !important; /* Red glassmorphic background with transparency */
+                backdrop-filter: blur(10px) !important; /* Add blur effect for glassmorphic effect */
+            }
+            .toast.success {
+                background: rgba(76, 175, 80, 0.8) !important;
+            }
+            .toast.warning {
+                background: rgba(255, 152, 0, 0.8) !important;
+            }
+            .toast.info {
+                background: rgba(255, 255, 255, 0.1) !important;
+            }
+            .toast.default {
+                background: rgba(51, 51, 51, 0.8) !important;
+            }
+            .lds-ripple,
+            .lds-ripple div {
+                box-sizing: border-box;
+            }
+            .lds-ripple {
+                display: inline-block;
+                position: relative;
+                width: 40px;
+                height: 40px;
+                margin-left: 10px; /* Adjust margin to the left */
+                margin-right: -10px; /* Remove right margin */
+            }
+            .lds-ripple div {
+                position: absolute;
+                border: 4px solid #fff;
+                opacity: 1;
+                border-radius: 50%;
+                animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+            }
+            .lds-ripple div:nth-child(2) {
+                animation-delay: -0.5s;
+            }
+            @keyframes lds-ripple {
+                0% {
+                    top: 18px;
+                    left: 18px;
+                    width: 4px;
+                    height: 4px;
+                    opacity: 0;
+                }
+                4.9% {
+                    top: 18px;
+                    left: 18px;
+                    width: 4px;
+                    height: 4px;
+                    opacity: 0;
+                }
+                5% {
+                    top: 18px;
+                    left: 18px;
+                    width: 4px;
+                    height: 4px;
+                    opacity: 1;
+                }
+                100% {
+                    top: 0;
+                    left: 0;
+                    width: 40px;
+                    height: 40px;
+                    opacity: 0;
+                }
+            }
+        </style><style>.hv-extension-countdown{display:none;width:100%;height:100%;z-index:100000}#hvLinkedInCookiePermissionBtn{padding:0.625rem 1.5rem;border-radius:8px;background:#eb602d;color:#fff;border-radius:0.5rem !important;font-size:14px;font-weight:600;cursor:pointer}.hv-icon-hover-transform:hover{-ms-transform:scale(1.2);-webkit-transform:scale(1.2);transform:scale(1.2)}.hv-icon-unslected #hvPauseImgActive{display:none}.hv-icon-unslected #hvPauseImg{display:block}.hv-icon-unslected #hvPlayImgActive{display:none}.hv-icon-unslected #hvPlayImg{display:block}.hv-close-highlights #hvMinimizeImgActive{display:none}.hv-close-highlights:hover #hvMinimizeImg{display:none}.hv-close-highlights:hover #hvMinimizeImgActive{display:block;transform:scale(1.2)}.hv-highlight-options-div .hv-icon-hover-transform #hvCursorAnimationImg{display:none}.hv-highlight-options-div .hv-icon-hover-transform #hvCursorAnimationImgActive{display:block}.hv-highlight-options-div .hv-icon-hover-transform #hvPenImg{display:none}.hv-highlight-options-div .hv-icon-hover-transform #hvPenImgActive{display:block}.hv-highlight-options-div .hv-icon-hover-transform #hvFocusImg{display:none}.hv-highlight-options-div .hv-icon-hover-transform #hvFocusImgActive{display:block}.hv-highlight-options-div .hv-icon-hover-transform #hvEraseImg{display:none}.hv-highlight-options-div .hv-icon-hover-transform #hvEraseImgActive{display:block}.hv-highlight-options-div .hv-icon-hover-transform #hvClearImg{display:none}.hv-highlight-options-div .hv-icon-hover-transform #hvClearImgActive{display:block}.hv-highlight-options-div .hv-icon-hover-transform #hvWebCamImg{display:none}.hv-highlight-options-div .hv-icon-hover-transform #hvWebCamImgActive{display:block}.hv-highlight-options-div .hv-icon-hover-transform #hvStopImg{display:none}.hv-highlight-options-div .hv-icon-hover-transform #hvStopImgActive{display:block}.hv-highlight-options-div .hv-icon-hover-transform #hvPauseImg{display:none}.hv-highlight-options-div .hv-icon-hover-transform #hvPauseImgActive{display:block}.hv-highlight-options-div .hv-icon-hover-transform #hvPlayImg{display:none}.hv-highlight-options-div .hv-icon-hover-transform #hvPlayImgActive{display:block}.hv-icon-hover #hvCollapseImg{display:none}.hv-icon-hover #hvCollapseImgActive{display:block}.hv-act-comp-bottom-left,.hv-act-comp-bottom-right{position:fixed;bottom:10px;-background-color:#424242cc;background-color:rgba(49,49,49,0.85);max-height:37px;-overflow:hidden;border:0;-border-radius:0px 5px 5px 0px;cursor:default;z-index:10000001;min-width:251px}.hv-act-comp-bottom-right{right:60px}.hv-act-comp-bottom-left{left:50px}.hv-collapsed{box-sizing:content-box;width:17px;height:17px;display:flex;justify-content:center;background-color:rgba(49,49,49,0.85);border-radius:50%;padding:10px;position:absolute;top:-40px;right:0px;max-height:37px;cursor:pointer;transition:all 300ms ease-out}.hv-collapsed-icon{height:20px;margin-top:-1px}#collapsDotsIconActive{display:none}.hv-icon-hover #collapsDotsIconActive{display:block}.hv-icon-hover #collapsDotsIcon{display:none}.hv-tooltip-panel{width:105%;left:0px;right:-43px;position:absolute;bottom:37px;-background-color:#424242cc;background-color:rgba(49,49,49,0.85);padding:12px 0px;border-radius:5px 5px 0 0;font-size:11px;font-weight:lighter;color:#ffffff;text-align:center;letter-spacing:0.3px;margin:0 auto;transition:all 300ms ease-out;line-height:17px;white-space:pre-line}.hv-tooltip-panel-toggle{bottom:-50px}.hv-highlight-options-div img{width:12px;height:12px}.hv-icon-out-space{display:inline-block;cursor:pointer;padding:11px 0px 15px 10px;box-sizing:content-box;vertical-align:top;padding:13px 10px}.hv-icon-out-space img{cursor:pointer}.hv-icon-out-disable{position:relative;opacity:0.3;top:0px;height:37px;box-sizing:border-box;vertical-align:top}.hv-icon-out-disable img{margin-bottom:20px}.hv-togarrow-spacer{position:absolute;background-color:rgba(49,49,49,0.85);display:inline-block;border-radius:0 5px 5px 0;cursor:pointer;padding:0px;width:44px;height:37px}.hv-act-comp-bottom-left .hv-togarrow-spacer{left:-34px;border-radius:5px 0px 0px 5px;width:34px}.hv-togarrow,.hv-togarrow-left{padding:13px;box-sizing:content-box}.hv-choose-color-panel{width:max-content}
+</style><style data-styled="active" data-styled-version="5.3.6"></style><style>:root {
+  --background-color: #F6F4E9;
+
+  --text-color: #210803;
+  --text-color-light: #735d58;
+
+  --banner-background-color: #FF3500;
+  --banner-text-color: #F6F4E9;
+
+  --secondary-banner-background-color: #FFD6F8;
+  --secondary-banner-text-color: #FF3500;
+
+  --button-text-color: #F6F4E9;
+  --button-color: #6FB382;
+  --button-color-hover: #5A8F6F;
+  --button-color-active: #4C7B5A;
+  --button-color-disabled: #A3C6A9;
+
+  --switch-color: #FF3500;
+
+  --font-primary: 'Work Sans', sans-serif !important;
+
+  --menu-background: #fffefc;
+  --menu-background-grey-light: #f9f9f9;
+  --menu-background-grey-dark: #efefef;
+  --menu-background-highlight: #f8f5f1;
+  --menu-border: #d2c9bd;
+  --menu-text: #210803;
+  --menu-text-light: #735d58;
+  --menu-grey-dark: #999999;
+}</style><style>:root {
+  --toastify-color-light: #fff;
+  --toastify-color-dark: #121212;
+  --toastify-color-info: #3498db;
+  --toastify-color-success: #07bc0c;
+  --toastify-color-warning: #f1c40f;
+  --toastify-color-error: #e74c3c;
+  --toastify-color-transparent: rgba(255, 255, 255, 0.7);
+  --toastify-icon-color-info: var(--toastify-color-info);
+  --toastify-icon-color-success: var(--toastify-color-success);
+  --toastify-icon-color-warning: var(--toastify-color-warning);
+  --toastify-icon-color-error: var(--toastify-color-error);
+  --toastify-toast-width: 320px;
+  --toastify-toast-background: #fff;
+  --toastify-toast-min-height: 64px;
+  --toastify-toast-max-height: 800px;
+  --toastify-font-family: sans-serif;
+  --toastify-z-index: 9999;
+  --toastify-text-color-light: #757575;
+  --toastify-text-color-dark: #fff;
+  --toastify-text-color-info: #fff;
+  --toastify-text-color-success: #fff;
+  --toastify-text-color-warning: #fff;
+  --toastify-text-color-error: #fff;
+  --toastify-spinner-color: #616161;
+  --toastify-spinner-color-empty-area: #e0e0e0;
+  --toastify-color-progress-light: linear-gradient(
+    to right,
+    #4cd964,
+    #5ac8fa,
+    #007aff,
+    #34aadc,
+    #5856d6,
+    #ff2d55
+  );
+  --toastify-color-progress-dark: #bb86fc;
+  --toastify-color-progress-info: var(--toastify-color-info);
+  --toastify-color-progress-success: var(--toastify-color-success);
+  --toastify-color-progress-warning: var(--toastify-color-warning);
+  --toastify-color-progress-error: var(--toastify-color-error);
+}
+
+.Toastify__toast-container.rytrToastify {
+  z-index: var(--toastify-z-index);
+  -webkit-transform: translate3d(0, 0, var(--toastify-z-index));
+  transform: translate3d(0, 0, var(--toastify-z-index));
+  position: fixed;
+  padding: 4px;
+  width: var(--toastify-toast-width);
+  box-sizing: border-box;
+  color: #fff;
+}
+.Toastify__toast-container--top-left.rytrToastify {
+  top: 1em;
+  left: 1em;
+}
+.Toastify__toast-container--top-center.rytrToastify {
+  top: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Toastify__toast-container--top-right.rytrToastify {
+  top: 1em;
+  right: 1em;
+}
+.Toastify__toast-container--bottom-left.rytrToastify {
+  bottom: 1em;
+  left: 1em;
+}
+.Toastify__toast-container--bottom-center.rytrToastify {
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Toastify__toast-container--bottom-right.rytrToastify {
+  bottom: 1em;
+  right: 1em;
+}
+
+@media only screen and (max-width : 480px) {
+  .Toastify__toast-container.rytrToastify {
+    width: 100vw;
+    padding: 0;
+    left: 0;
+    margin: 0;
+  }
+  .Toastify__toast-container--top-left.rytrToastify, .Toastify__toast-container--top-center.rytrToastify, .Toastify__toast-container--top-right.rytrToastify {
+    top: 0;
+    transform: translateX(0);
+  }
+  .Toastify__toast-container--bottom-left.rytrToastify, .Toastify__toast-container--bottom-center.rytrToastify, .Toastify__toast-container--bottom-right.rytrToastify {
+    bottom: 0;
+    transform: translateX(0);
+  }
+  .Toastify__toast-container--rtl.rytrToastify {
+    right: 0;
+    left: initial;
+  }
+}
+.rytrToastify .Toastify__toast {
+  position: relative;
+  min-height: var(--toastify-toast-min-height);
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 15px 0 rgba(0, 0, 0, 0.05);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  max-height: var(--toastify-toast-max-height);
+  overflow: hidden;
+  font-family: var(--toastify-font-family);
+  cursor: default;
+  direction: ltr;
+  /* webkit only issue #791 */
+  z-index: 0;
+}
+.rytrToastify .Toastify__toast--rtl {
+  direction: rtl;
+}
+.rytrToastify .Toastify__toast--close-on-click {
+  cursor: pointer;
+}
+.rytrToastify .Toastify__toast-body {
+  margin: auto 0;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+  padding: 6px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.rytrToastify .Toastify__toast-body > div:last-child {
+  word-break: break-word;
+  -ms-flex: 1;
+      flex: 1;
+}
+.rytrToastify .Toastify__toast-icon {
+  -webkit-margin-end: 10px;
+          margin-inline-end: 10px;
+  width: 20px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.rytrToastify .Toastify--animate {
+  animation-fill-mode: both;
+  animation-duration: 0.7s;
+}
+
+.rytrToastify .Toastify--animate-icon {
+  animation-fill-mode: both;
+  animation-duration: 0.3s;
+}
+
+@media only screen and (max-width : 480px) {
+  .rytrToastify .Toastify__toast {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+}
+.rytrToastify .Toastify__toast-theme--dark {
+  background: var(--toastify-color-dark);
+  color: var(--toastify-text-color-dark);
+}
+.rytrToastify .Toastify__toast-theme--light {
+  background: var(--toastify-color-light);
+  color: var(--toastify-text-color-light);
+}
+.rytrToastify .Toastify__toast-theme--colored.Toastify__toast--default {
+  background: var(--toastify-color-light);
+  color: var(--toastify-text-color-light);
+}
+.rytrToastify .Toastify__toast-theme--colored.Toastify__toast--info {
+  color: var(--toastify-text-color-info);
+  background: var(--toastify-color-info);
+}
+.rytrToastify .Toastify__toast-theme--colored.Toastify__toast--success {
+  color: var(--toastify-text-color-success);
+  background: var(--toastify-color-success);
+}
+.rytrToastify .Toastify__toast-theme--colored.Toastify__toast--warning {
+  color: var(--toastify-text-color-warning);
+  background: var(--toastify-color-warning);
+}
+.rytrToastify .Toastify__toast-theme--colored.Toastify__toast--error {
+  color: var(--toastify-text-color-error);
+  background: var(--toastify-color-error);
+}
+
+.rytrToastify .Toastify__progress-bar-theme--light {
+  background: var(--toastify-color-progress-light);
+}
+.rytrToastify .Toastify__progress-bar-theme--dark {
+  background: var(--toastify-color-progress-dark);
+}
+.rytrToastify .Toastify__progress-bar--info {
+  background: var(--toastify-color-progress-info);
+}
+.rytrToastify .Toastify__progress-bar--success {
+  background: var(--toastify-color-progress-success);
+}
+.rytrToastify .Toastify__progress-bar--warning {
+  background: var(--toastify-color-progress-warning);
+}
+.rytrToastify .Toastify__progress-bar--error {
+  background: var(--toastify-color-progress-error);
+}
+.rytrToastify .Toastify__progress-bar-theme--colored.Toastify__progress-bar--info, .Toastify__progress-bar-theme--colored.Toastify__progress-bar--success, .Toastify__progress-bar-theme--colored.Toastify__progress-bar--warning, .Toastify__progress-bar-theme--colored.Toastify__progress-bar--error {
+  background: var(--toastify-color-transparent);
+}
+
+.rytrToastify .Toastify__close-button {
+  color: #fff;
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.3s ease;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+.rytrToastify .Toastify__close-button--light {
+  color: #000;
+  opacity: 0.3;
+}
+.rytrToastify .Toastify__close-button > svg {
+  fill: currentColor;
+  height: 16px;
+  width: 14px;
+}
+.rytrToastify .Toastify__close-button:hover, .Toastify__close-button:focus {
+  opacity: 1;
+}
+
+@keyframes Toastify__trackProgress {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+.rytrToastify .Toastify__progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  z-index: var(--toastify-z-index);
+  opacity: 0.7;
+  transform-origin: left;
+}
+.rytrToastify .Toastify__progress-bar--animated {
+  animation: Toastify__trackProgress linear 1 forwards;
+}
+.rytrToastify .Toastify__progress-bar--controlled {
+  transition: transform 0.2s;
+}
+.rytrToastify .Toastify__progress-bar--rtl {
+  right: 0;
+  left: initial;
+  transform-origin: right;
+}
+
+.rytrToastify .Toastify__spinner {
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border: 2px solid;
+  border-radius: 100%;
+  border-color: var(--toastify-spinner-color-empty-area);
+  border-right-color: var(--toastify-spinner-color);
+  animation: Toastify__spin 0.65s linear infinite;
+}
+
+@keyframes Toastify__bounceInRight {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0);
+  }
+  75% {
+    transform: translate3d(10px, 0, 0);
+  }
+  90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes Toastify__bounceOutRight {
+  20% {
+    opacity: 1;
+    transform: translate3d(-20px, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0);
+  }
+}
+@keyframes Toastify__bounceInLeft {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0);
+  }
+  75% {
+    transform: translate3d(-10px, 0, 0);
+  }
+  90% {
+    transform: translate3d(5px, 0, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes Toastify__bounceOutLeft {
+  20% {
+    opacity: 1;
+    transform: translate3d(20px, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+@keyframes Toastify__bounceInUp {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+  75% {
+    transform: translate3d(0, 10px, 0);
+  }
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes Toastify__bounceOutUp {
+  20% {
+    transform: translate3d(0, -10px, 0);
+  }
+  40%, 45% {
+    opacity: 1;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+@keyframes Toastify__bounceInDown {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes Toastify__bounceOutDown {
+  20% {
+    transform: translate3d(0, 10px, 0);
+  }
+  40%, 45% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+.Toastify__bounce-enter--top-left, .Toastify__bounce-enter--bottom-left {
+  animation-name: Toastify__bounceInLeft;
+}
+.Toastify__bounce-enter--top-right, .Toastify__bounce-enter--bottom-right {
+  animation-name: Toastify__bounceInRight;
+}
+.Toastify__bounce-enter--top-center {
+  animation-name: Toastify__bounceInDown;
+}
+.Toastify__bounce-enter--bottom-center {
+  animation-name: Toastify__bounceInUp;
+}
+
+.Toastify__bounce-exit--top-left, .Toastify__bounce-exit--bottom-left {
+  animation-name: Toastify__bounceOutLeft;
+}
+.Toastify__bounce-exit--top-right, .Toastify__bounce-exit--bottom-right {
+  animation-name: Toastify__bounceOutRight;
+}
+.Toastify__bounce-exit--top-center {
+  animation-name: Toastify__bounceOutUp;
+}
+.Toastify__bounce-exit--bottom-center {
+  animation-name: Toastify__bounceOutDown;
+}
+
+@keyframes Toastify__zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes Toastify__zoomOut {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  to {
+    opacity: 0;
+  }
+}
+.Toastify__zoom-enter {
+  animation-name: Toastify__zoomIn;
+}
+
+.Toastify__zoom-exit {
+  animation-name: Toastify__zoomOut;
+}
+
+@keyframes Toastify__flipIn {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+  to {
+    transform: perspective(400px);
+  }
+}
+@keyframes Toastify__flipOut {
+  from {
+    transform: perspective(400px);
+  }
+  30% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1;
+  }
+  to {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+  }
+}
+.Toastify__flip-enter {
+  animation-name: Toastify__flipIn;
+}
+
+.Toastify__flip-exit {
+  animation-name: Toastify__flipOut;
+}
+
+@keyframes Toastify__slideInRight {
+  from {
+    transform: translate3d(110%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes Toastify__slideInLeft {
+  from {
+    transform: translate3d(-110%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes Toastify__slideInUp {
+  from {
+    transform: translate3d(0, 110%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes Toastify__slideInDown {
+  from {
+    transform: translate3d(0, -110%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes Toastify__slideOutRight {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(110%, 0, 0);
+  }
+}
+@keyframes Toastify__slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(-110%, 0, 0);
+  }
+}
+@keyframes Toastify__slideOutDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(0, 500px, 0);
+  }
+}
+@keyframes Toastify__slideOutUp {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(0, -500px, 0);
+  }
+}
+.Toastify__slide-enter--top-left, .Toastify__slide-enter--bottom-left {
+  animation-name: Toastify__slideInLeft;
+}
+.Toastify__slide-enter--top-right, .Toastify__slide-enter--bottom-right {
+  animation-name: Toastify__slideInRight;
+}
+.Toastify__slide-enter--top-center {
+  animation-name: Toastify__slideInDown;
+}
+.Toastify__slide-enter--bottom-center {
+  animation-name: Toastify__slideInUp;
+}
+
+.Toastify__slide-exit--top-left, .Toastify__slide-exit--bottom-left {
+  animation-name: Toastify__slideOutLeft;
+}
+.Toastify__slide-exit--top-right, .Toastify__slide-exit--bottom-right {
+  animation-name: Toastify__slideOutRight;
+}
+.Toastify__slide-exit--top-center {
+  animation-name: Toastify__slideOutUp;
+}
+.Toastify__slide-exit--bottom-center {
+  animation-name: Toastify__slideOutDown;
+}
+
+@keyframes Toastify__spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style><style>.lTQFuXa3V795C5xkFue4{position:absolute;z-index:10000;font-family:var(--font-primary)}.lTQFuXa3V795C5xkFue4 .iWziZuyXqpyUt1bsL0IH{display:flex;align-items:center;flex-direction:row;justify-content:center;padding:4px 8px 4px 8px;border-radius:16px;font-size:15px;color:var(--text-color);background:linear-gradient(135deg, #f5f5f5, #ffffff);box-shadow:0 4px 8px rgba(0,0,0,.1);cursor:pointer;transition:all .3s ease;border:1px solid #dedede;outline:none}.lTQFuXa3V795C5xkFue4 .iWziZuyXqpyUt1bsL0IH:hover{background:linear-gradient(135deg, #e8e8e8, #f2f2f2)}.lTQFuXa3V795C5xkFue4 .iWziZuyXqpyUt1bsL0IH:active{box-shadow:0 2px 4px rgba(0,0,0,.1)}.lTQFuXa3V795C5xkFue4 .iWziZuyXqpyUt1bsL0IH svg{padding-right:5px}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC{position:relative;z-index:10001;border:none;background:rgba(0,0,0,0);outline:none;width:0;opacity:1;display:flex;flex-wrap:wrap;transition:width .3s ease;border-radius:16px;box-shadow:0px 8px 16px 0px rgba(0,0,0,.2)}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1{background-color:var(--menu-background);width:320px;border-radius:16px;border:1px solid var(--menu-border);list-style-type:none;overflow:hidden;margin:0;padding:0}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1>li:not(:last-child){border-bottom:1px solid var(--menu-border)}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1>li:hover{background-color:var(--menu-background-grey-light)}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1>li.RjEGw7__KCRU7TstD5yi:hover{background-color:var(--menu-background-grey-dark)}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1 textarea{border:1px solid #dadce0;border-radius:8px;width:100%;padding:8px 16px;margin-bottom:0px;font-size:12px;color:#202124;box-shadow:inset 0 1px 2px rgba(0,0,0,.1)}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1 textarea::placeholder{color:#909090}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1 textarea:focus{border-color:#4285f4;box-shadow:inset 0 1px 2px rgba(0,0,0,.1),0 0 5px #4285f4}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1 li{display:flex;align-items:center;color:var(--menu-text);background-color:var(--menu-background);padding:5px 10px;cursor:pointer}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1 li.M1KB5HVRjEpIQOFTpFYI{background-color:var(--menu-background-highlight)}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1 li.RjEGw7__KCRU7TstD5yi{color:var(--text);padding:4px 10px;cursor:default;font-size:smaller;background-color:var(--menu-background-grey-dark)}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1 li.c2Mo1uGoaln4H69Y4E6E{padding:5px 5px;cursor:default}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1 li.c2Mo1uGoaln4H69Y4E6E .JdfvYk3lCxrQzQGl1YPC{width:100%;border:none;background-color:var(--menu-background);color:var(--text);font-size:12px;font-family:var(--font-primary);outline:none;border:1px solid var(--menu-border);border-radius:4px;padding:5px}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1 li.c2Mo1uGoaln4H69Y4E6E .xV0FHpiM2qkoOC2vY58k{cursor:pointer;margin-left:6px;margin-right:3px}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1 li .xV0FHpiM2qkoOC2vY58k{margin-right:6px}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1 li .xV0FHpiM2qkoOC2vY58k svg{fill:var(--menu-text);height:15px;width:15px}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1 li .M6RHs88_2neTSi9YyzRQ{display:flex;flex-direction:column}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1 li .tNZe3rLtPUTYH2eNgH1A{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:12px}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1 li .JJtTxV3rAXkXzvnysRyZ{display:block;color:var(--text-color-light);font-size:10px}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1 li .yF8sbhtgF4eBPgi1V9oR{display:none;position:absolute;top:0;background-color:rgba(0,0,0,0);min-width:160px;overflow-y:auto;box-shadow:0px 8px 16px 0px rgba(0,0,0,.2);z-index:10002;border-radius:16px;box-sizing:border-box;margin:0;padding:0}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1 li .yF8sbhtgF4eBPgi1V9oR .l5dMX0rnbnLAPtixjeO1{max-width:300px}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1 li .TMayNOEUbF0JizWEbQUg{display:block}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1 .s6tqHEQp6XgjkJvknLPI{color:var(--menu-grey-dark);cursor:not-allowed;opacity:.6}.lTQFuXa3V795C5xkFue4 .RD1Ai85Kn_xeBWheZNQC .l5dMX0rnbnLAPtixjeO1 .s6tqHEQp6XgjkJvknLPI svg{fill:var(--menu-grey-dark);opacity:.6}</style><style>.rytr-highlight {
+  background-color: #fff8e1;
+}
+
+.rytr-svg {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+}
+
+.rytr-input {
+  all: unset;
+}
+</style><style>.I5H8iQYcyPeDiDhG4zqG{position:absolute;z-index:10030;display:flex;flex-direction:column;border-radius:16px;border:1px solid var(--menu-border);width:500px;font-family:var(--font-primary);font-size:13px;background-color:var(--menu-background);box-shadow:0px 8px 16px 0px rgba(0,0,0,.2);color:var(--menu-text)}.I5H8iQYcyPeDiDhG4zqG .Cd4AWk9UXGm4hnBwjs3T{display:flex;justify-content:space-between;align-items:center;padding:5px 5px 5px 15px;border-bottom:1px solid var(--menu-border)}.I5H8iQYcyPeDiDhG4zqG .l8NvOLyw8PYmsMI3uj70{resize:none;border:none;border-radius:0px;padding:10px;margin:0;height:130px;width:100%;font-size:13px;box-sizing:border-box;outline:none;background-color:var(--menu-background-grey-dark)}.I5H8iQYcyPeDiDhG4zqG .l8NvOLyw8PYmsMI3uj70:disabled{cursor:not-allowed}.I5H8iQYcyPeDiDhG4zqG .Wg7us6rc5FpDU09oA38o{display:flex;justify-content:flex-end;padding:5px 10px 5px 10px;border-top:1px solid var(--menu-border)}.I5H8iQYcyPeDiDhG4zqG .hpxV2cQQ_mT9Xf5iVMMD{z-index:10000;background-color:#fff;border:none;cursor:pointer;font-size:1em;padding:5px 10px}.I5H8iQYcyPeDiDhG4zqG .hpxV2cQQ_mT9Xf5iVMMD svg{padding-top:2px;fill:var(--menu-text);height:15px;width:15px}.I5H8iQYcyPeDiDhG4zqG .hpxV2cQQ_mT9Xf5iVMMD:disabled{cursor:not-allowed}.I5H8iQYcyPeDiDhG4zqG .fCi9bUcumrsxkErEMlfA,.I5H8iQYcyPeDiDhG4zqG .FZ_kr1w3Z7FybD1qht9h,.I5H8iQYcyPeDiDhG4zqG .ht8UEdqA4Uk9oOhboH0D{z-index:10000;background-color:#fff;border:none;cursor:pointer;font-size:1em;padding:5px 10px}.I5H8iQYcyPeDiDhG4zqG .fCi9bUcumrsxkErEMlfA:hover,.I5H8iQYcyPeDiDhG4zqG .FZ_kr1w3Z7FybD1qht9h:hover,.I5H8iQYcyPeDiDhG4zqG .ht8UEdqA4Uk9oOhboH0D:hover{background-color:var(--menu-background-grey-dark);border-radius:50%}.I5H8iQYcyPeDiDhG4zqG .fCi9bUcumrsxkErEMlfA svg,.I5H8iQYcyPeDiDhG4zqG .FZ_kr1w3Z7FybD1qht9h svg,.I5H8iQYcyPeDiDhG4zqG .ht8UEdqA4Uk9oOhboH0D svg{padding-top:2px;fill:#3e3836;height:15px;width:15px}.I5H8iQYcyPeDiDhG4zqG .fCi9bUcumrsxkErEMlfA:disabled,.I5H8iQYcyPeDiDhG4zqG .FZ_kr1w3Z7FybD1qht9h:disabled,.I5H8iQYcyPeDiDhG4zqG .ht8UEdqA4Uk9oOhboH0D:disabled{cursor:not-allowed}</style><style>.xGwuWv75A1fsmwXdyOEp{position:absolute;z-index:10000;font-family:var(--font-primary)}.xGwuWv75A1fsmwXdyOEp .eYnk1OCM3cBKChoMxFe3{position:relative;z-index:10001;border:none;background:var(--menu-background);outline:none;width:0;overflow:hidden;opacity:1;display:flex;flex-wrap:wrap;transition:width .3s ease;border-radius:16px;box-shadow:0px 8px 16px 0px rgba(0,0,0,.2);display:flex;flex-direction:column}.xGwuWv75A1fsmwXdyOEp .eYnk1OCM3cBKChoMxFe3 .kKI45bOqNRRk4sknkb5a{display:flex;justify-content:space-between}.xGwuWv75A1fsmwXdyOEp .eYnk1OCM3cBKChoMxFe3 .kKI45bOqNRRk4sknkb5a .bABWvikGld4cgzcobct3{margin-right:.5rem}.xGwuWv75A1fsmwXdyOEp .eYnk1OCM3cBKChoMxFe3 .kKI45bOqNRRk4sknkb5a .bABWvikGld4cgzcobct3 svg{fill:#909090;width:15px;height:15px}.xGwuWv75A1fsmwXdyOEp .eYnk1OCM3cBKChoMxFe3 .kKI45bOqNRRk4sknkb5a .DWwofTlZU_jmSQvgzCN9{border:none;cursor:pointer;font-size:1em;padding:2px 8px;background:none}.xGwuWv75A1fsmwXdyOEp .eYnk1OCM3cBKChoMxFe3 .kKI45bOqNRRk4sknkb5a .DWwofTlZU_jmSQvgzCN9 svg{fill:#909090;width:15px;height:15px}.xGwuWv75A1fsmwXdyOEp .eYnk1OCM3cBKChoMxFe3 .kKI45bOqNRRk4sknkb5a .DWwofTlZU_jmSQvgzCN9:disabled{cursor:not-allowed}.xGwuWv75A1fsmwXdyOEp .eYnk1OCM3cBKChoMxFe3 .oBD8h78yEUFB4ByRiogI{display:flex;flex-direction:column;flex-grow:1;overflow-y:auto;overflow-x:hidden;padding:0 .5rem;margin-bottom:.5rem}</style><style>.bZcvpc5FRxnonKlomSxg{all:unset;background-color:#ff3500;border-radius:50%;outline:none;box-shadow:0 0 0 1px rgba(0,0,0,.1);transition:opacity .3s ease-in-out;cursor:pointer;z-index:100020;padding:.4rem;width:18px;height:18px;display:flex;align-items:center;justify-content:center;opacity:1}.bZcvpc5FRxnonKlomSxg:disabled{display:none}.bZcvpc5FRxnonKlomSxg svg{fill:#f6f4e9;width:12px;height:12px}</style><style>.z7ZLgxVRdrh9sgq7ffwG{display:flex;align-items:center;font-size:12px;padding:2px 5px 5px 5px;color:#202124;font-family:var(--font-primary)}.z7ZLgxVRdrh9sgq7ffwG textarea{flex:1;border:1px solid #dadce0;border-radius:0 8px 8px 0;padding:4px 6px;margin-bottom:0px;font-size:12px;color:#202124;box-shadow:inset 0 1px 2px rgba(0,0,0,.1)}.z7ZLgxVRdrh9sgq7ffwG textarea::placeholder{color:#909090}.z7ZLgxVRdrh9sgq7ffwG textarea:focus{border-color:#4285f4;box-shadow:inset 0 1px 2px rgba(0,0,0,.1),0 0 5px #4285f4}.z7ZLgxVRdrh9sgq7ffwG textarea:disabled{background:#f9f9f9;color:#d3d3d3;cursor:not-allowed}.z7ZLgxVRdrh9sgq7ffwG .yiQZkxkNiFCakYQSOlq3{cursor:pointer;width:110px}.z7ZLgxVRdrh9sgq7ffwG .yiQZkxkNiFCakYQSOlq3 select{border:none;background:rgba(0,0,0,0);padding:8px;-webkit-appearance:none;-moz-appearance:none;appearance:none;color:#202124}.z7ZLgxVRdrh9sgq7ffwG .yiQZkxkNiFCakYQSOlq3 select:focus{outline:none}.NKAQhawBjdyXvH074O9v{cursor:pointer;display:block;font-size:inherit;width:100%;user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);background-color:#fffefc;color:#202124;padding:5px 10px;box-sizing:border-box;display:flex;align-items:center}.NKAQhawBjdyXvH074O9v:hover{background-color:#f9f9f9}.NKAQhawBjdyXvH074O9v.m65FDtp_5Oz05sUbqDdO{background-color:#f8f5f1}.NKAQhawBjdyXvH074O9v .QN2Esm7keceAUuJDRJEQ{margin-right:6px}.NKAQhawBjdyXvH074O9v .QN2Esm7keceAUuJDRJEQ svg{fill:var(--menu-text);height:15px;width:15px}.NKAQhawBjdyXvH074O9v .feTO8TGP9wrYOjpAhiiG{display:flex;flex-direction:column}.NKAQhawBjdyXvH074O9v .nbZuWTtdyoAsx6d6Fq0H{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:12px;color:#202124}.NKAQhawBjdyXvH074O9v .yXJYXDyfGLbB3uvmWYMj{display:block;color:var(--text-color-light);font-size:10px}</style></head>
+<body data-new-gr-c-s-check-loaded="14.1251.0" data-gr-ext-installed="">
+    <!-- Scripture Bar -->
+    <div class="scripture-bar">
+        "Know ye therefore that they which are of faith, the same are the children of Abraham." - <a href="https://www.blueletterbible.org/kjv/gal/3/1/ss0/rl0/s_1094001" target="_blank">Galatians 3:7</a>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-tree"></i>
+                Harrison Family Heritage
+            </div>
+            <nav class="nav-menu">
+                <a href="https://gensparkpublicblob.blob.core.windows.net/user-upload-image/page/tooluse_f94ZxF7YQDe_j0-HAfrtmg/harrison_family_heritage_improved_contrast.html#home" class="nav-item">Home</a>
+                <a href="https://gensparkpublicblob.blob.core.windows.net/user-upload-image/page/tooluse_f94ZxF7YQDe_j0-HAfrtmg/harrison_family_heritage_improved_contrast.html#family-tree" class="nav-item">Family Tree</a>
+                <a href="https://gensparkpublicblob.blob.core.windows.net/user-upload-image/page/tooluse_f94ZxF7YQDe_j0-HAfrtmg/harrison_family_heritage_improved_contrast.html#history" class="nav-item">History</a>
+                <a href="https://gensparkpublicblob.blob.core.windows.net/user-upload-image/page/tooluse_f94ZxF7YQDe_j0-HAfrtmg/harrison_family_heritage_improved_contrast.html#directory" class="nav-item">Directory</a>
+                <a href="https://gensparkpublicblob.blob.core.windows.net/user-upload-image/page/tooluse_f94ZxF7YQDe_j0-HAfrtmg/harrison_family_heritage_improved_contrast.html#gallery" class="nav-item">Gallery</a>
+                <a href="https://gensparkpublicblob.blob.core.windows.net/user-upload-image/page/tooluse_f94ZxF7YQDe_j0-HAfrtmg/harrison_family_heritage_improved_contrast.html#login" class="nav-item">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Harrison Family Heritage</h1>
+            <p class="hero-subtitle">Preserving Our Legacy • Connecting Our Generations • Honoring Our Roots</p>
+            <p style="color: #4a5568; font-size: 1.1rem;">Discover the rich history of the Harrison family, from John Rufus Harrison Sr. who came from Cuba to Florida in the 1800s, to the many generations that followed. Explore our interactive family tree, share memories, and stay connected with family members across the country.</p>
+        </div>
+    </section>
+
+    <!-- Interactive Family Tree Section -->
+    <section id="family-tree" class="section">
+        <h2 class="section-title">Interactive Family Tree</h2>
+        <p style="text-align: center; color: #4a5568; margin-bottom: 3rem; font-size: 1.1rem;">
+            Explore our family heritage through an interactive genealogy tree. Click on family members to discover their descendants and learn about their lives and contributions to our family legacy.
+        </p>
+        
+        <div class="family-tree-container">
+            <div class="generation-title">Founding Generation</div>
+            
+            <!-- Founding Generation -->
+            <div class="founding-generation">
+                <div class="family-member-card expandable" onclick="toggleChildren(&#39;founding-children&#39;)" style="cursor: pointer;">
+                    <div class="member-name">
+                        John Rufus Harrison Sr. &amp; Mary Jones
+                        <i class="fas fa-chevron-down expand-icon"></i>
+                    </div>
+                    <div class="member-details">
+                        Originally from Cuba • Settled in Florida • 1800s
+                    </div>
+                    <div class="member-details" style="margin-top: 0.5rem; font-weight: 500; color: #2d5a27;">
+                        Children: 3
+                    </div>
+                    
+                    <div id="founding-children" class="children-section hidden">
+                        <h4 style="color: #2d5a27; font-weight: 600; margin-bottom: 1rem;">Children:</h4>
+                        <div class="children-grid">
+                            <div class="child-card">
+                                <div class="child-name">Mary Harrison</div>
+                                <div class="child-details">Daughter</div>
+                            </div>
+                            <div class="child-card">
+                                <div class="child-name">John Rufus Harrison Jr.</div>
+                                <div class="child-details">Married Millie Bryant • 9 children</div>
+                            </div>
+                            <div class="child-card">
+                                <div class="child-name">Ronia Harrison Sr.</div>
+                                <div class="child-details">Married Hattie Welcome • 8 children</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Generation -->
+            <div class="second-generation">
+                <!-- John Rufus Harrison Jr. -->
+                <div class="family-member-card expandable" onclick="toggleChildren(&#39;john-jr-children&#39;)" style="cursor: pointer;">
+                    <div class="member-name">
+                        John Rufus Harrison Jr.
+                        <i class="fas fa-chevron-down expand-icon"></i>
+                    </div>
+                    <div class="member-details">
+                        Married Millie Bryant • 9 children
+                    </div>
+                    
+                    <div id="john-jr-children" class="children-section hidden">
+                        <h4 style="color: #2d5a27; font-weight: 600; margin-bottom: 1rem;">Children of John Rufus Jr. &amp; Millie Bryant:</h4>
+                        <div class="children-grid">
+                            <div class="child-card">
+                                <div class="child-name">Thomas Sparrow Harrison Sr.</div>
+                                <div class="child-details">Born May 5, 1888 - Died March 8, 1948<br>Married Ruby Lowe, then Willie Clark Martin<br>8 children by Ruby, 5 children by Willie</div>
+                            </div>
+                            <div class="child-card">
+                                <div class="child-name">Ethel Charlotte Harrison Woods</div>
+                                <div class="child-details">Married Raymond Woods<br>11 children</div>
+                            </div>
+                            <div class="child-card">
+                                <div class="child-name">James "Jim" Harrison</div>
+                                <div class="child-details">Had 2 wives<br>2 children by second wife</div>
+                            </div>
+                            <div class="child-card">
+                                <div class="child-name">Belle Harrison Griffin</div>
+                                <div class="child-details">Married Marion Griffin<br>No children</div>
+                            </div>
+                            <div class="child-card">
+                                <div class="child-name">Claude Harrison Beasley</div>
+                                <div class="child-details">Married Beasley<br>No children</div>
+                            </div>
+                            <div class="child-card">
+                                <div class="child-name">Pearl Harrison Calhoun</div>
+                                <div class="child-details">Married Calhoun<br>No children</div>
+                            </div>
+                            <div class="child-card">
+                                <div class="child-name">John "Tee Tart" Harrison Walker</div>
+                                <div class="child-details">Married Walker<br>No children</div>
+                            </div>
+                            <div class="child-card">
+                                <div class="child-name">Beulah Harrison Covington</div>
+                                <div class="child-details">Married Covington<br>Children: Robert, Henry, Kristina</div>
+                            </div>
+                            <div class="child-card">
+                                <div class="child-name">Ola Mae Harrison Caesar</div>
+                                <div class="child-details">Married Caesar<br>No children<br>Oldest living member at time of reunion</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ronia Harrison Sr. -->
+                <div class="family-member-card expandable" onclick="toggleChildren(&#39;ronia-sr-children&#39;)" style="cursor: pointer;">
+                    <div class="member-name">
+                        Ronia Harrison Sr.
+                        <i class="fas fa-chevron-down expand-icon"></i>
+                    </div>
+                    <div class="member-details">
+                        Married Hattie Welcome • 8 children
+                    </div>
+                    
+                    <div id="ronia-sr-children" class="children-section hidden">
+                        <h4 style="color: #2d5a27; font-weight: 600; margin-bottom: 1rem;">Children of Ronia Sr. &amp; Hattie Welcome:</h4>
+                        <div class="children-grid">
+                            <div class="child-card">
+                                <div class="child-name">Janie Harrison</div>
+                                <div class="child-details">Daughter of Ronia Sr. and Hattie</div>
+                            </div>
+                            <div class="child-card">
+                                <div class="child-name">Iola Harrison</div>
+                                <div class="child-details">Daughter of Ronia Sr. and Hattie</div>
+                            </div>
+                            <div class="child-card">
+                                <div class="child-name">Marie Harrison</div>
+                                <div class="child-details">Daughter of Ronia Sr. and Hattie</div>
+                            </div>
+                            <div class="child-card">
+                                <div class="child-name">Henry Harrison</div>
+                                <div class="child-details">Son of Ronia Sr. and Hattie</div>
+                            </div>
+                            <div class="child-card">
+                                <div class="child-name">Ronia Harrison Jr.</div>
+                                <div class="child-details">Son of Ronia Sr. and Hattie</div>
+                            </div>
+                            <div class="child-card">
+                                <div class="child-name">Lillie Harrison</div>
+                                <div class="child-details">Daughter of Ronia Sr. and Hattie</div>
+                            </div>
+                            <div class="child-card">
+                                <div class="child-name">Hattie Harrison</div>
+                                <div class="child-details">Daughter of Ronia Sr. and Hattie</div>
+                            </div>
+                            <div class="child-card">
+                                <div class="child-name">Maude Harrison</div>
+                                <div class="child-details">Daughter of Ronia Sr. and Hattie</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Family History Section -->
+    <section id="history" class="section">
+        <div class="history-section">
+            <h2 class="section-title">Our Family History</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div style="background: rgba(240, 255, 244, 0.5); padding: 2rem; border-radius: 15px; border-left: 4px solid #48bb78;">
+                    <h3 style="color: #2d5a27; font-weight: 600; margin-bottom: 1rem;">Our Origins</h3>
+                    <p style="color: #4a5568; line-height: 1.6;">John (originally Juan) Rufus Harrison, Sr., a native of Cuba, came to Florida in the 1800s where he met and married Mary Jones. From this union one daughter, Mary, and two sons, John Rufus, Jr., and Ronia were born.</p>
+                </div>
+                
+                <div style="background: rgba(240, 255, 244, 0.5); padding: 2rem; border-radius: 15px; border-left: 4px solid #48bb78;">
+                    <h3 style="color: #2d5a27; font-weight: 600; margin-bottom: 1rem;">Early Settlement</h3>
+                    <p style="color: #4a5568; line-height: 1.6;">John Rufus, Sr. settled in Jacksonville, Florida. After he and his wife, Mary passed away, their three young children were taken in by a cousin, Edward Jones, Sr., and his wife Jane, of Lake City, Florida, where they raised the children on a farm in the Falling Creek area of Columbia County, Florida.</p>
+                </div>
+                
+                <div style="background: rgba(240, 255, 244, 0.5); padding: 2rem; border-radius: 15px; border-left: 4px solid #48bb78;">
+                    <h3 style="color: #2d5a27; font-weight: 600; margin-bottom: 1rem;">Family Growth</h3>
+                    <p style="color: #4a5568; line-height: 1.6;">As adults, John Rufus Harrison, Jr. married Millie Bryant and had nine children. Ronia Harrison, Sr. married Hattie Welcome and had eight children. These families formed the foundation of our extensive family tree that continues to grow today.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Directory Section -->
+    <section id="directory" class="section">
+        <div class="directory-section">
+            <h2 class="section-title">Family Directory</h2>
+            <p style="text-align: center; color: #4a5568; margin-bottom: 2rem; font-size: 1.1rem;">
+                Access our comprehensive family directory by creating a member account.
+            </p>
+            
+            <div class="member-benefit">
+                <div class="benefit-title">
+                    <i class="fas fa-users"></i>
+                    What Members Get Access To:
+                </div>
+                <ul style="color: #065f46; margin-left: 1.5rem; line-height: 1.8;">
+                    <li>Complete family contact directory with addresses, phone numbers, and emails</li>
+                    <li>Ability to update your own contact information</li>
+                    <li>Add new family members and update relationships</li>
+                    <li>Upload family photos to the gallery</li>
+                    <li>Access to family communication tools</li>
+                    <li>Reunion planning and coordination features</li>
+                </ul>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://gensparkpublicblob.blob.core.windows.net/user-upload-image/page/tooluse_f94ZxF7YQDe_j0-HAfrtmg/harrison_family_heritage_improved_contrast.html#login" class="btn-primary" style="text-decoration: none; display: inline-block;">
+                    <i class="fas fa-sign-in-alt" style="margin-right: 0.5rem;"></i>
+                    Login or Create Account
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="gallery-section">
+            <h2 class="section-title">Family Photo Gallery</h2>
+            
+            <div class="instruction-box">
+                <div class="instruction-title">
+                    <i class="fas fa-camera"></i>
+                    How to Add Family Photos
+                </div>
+                <div class="instruction-steps">
+                    <p><strong>For Family Members:</strong></p>
+                    <ol style="margin-left: 1.5rem; line-height: 1.8;">
+                        <li>Create a member account and log in</li>
+                        <li>Go to your Member Dashboard</li>
+                        <li>Click "Upload Photo" button</li>
+                        <li>Add photo, caption, date, and event details</li>
+                        <li>Submit - your photo will appear in the gallery for all to enjoy!</li>
+                    </ol>
+                    <p style="margin-top: 1rem;"><strong>Photos are visible to everyone, but only logged-in family members can upload new ones.</strong></p>
+                </div>
+            </div>
+            
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <div class="photo-placeholder">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="photo-caption">
+                        <strong>Family Reunion 2018</strong><br>
+                        Lake City, Florida - July 20-22, 2018
+                    </div>
+                </div>
+                
+                <div class="photo-card">
+                    <div class="photo-placeholder">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <div class="photo-caption">
+                        <strong>Harrison Family Heritage</strong><br>
+                        Historical family photos and documents
+                    </div>
+                </div>
+                
+                <div class="photo-card">
+                    <div class="photo-placeholder">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="photo-caption">
+                        <strong>Multi-Generational Gathering</strong><br>
+                        Celebrating our family connections
+                    </div>
+                </div>
+                
+                <div class="photo-card">
+                    <div class="photo-placeholder">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="photo-caption">
+                        <strong>Family Memories</strong><br>
+                        Upload your family photos to share memories
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memorial Section -->
+    <section class="section">
+        <div style="background: rgba(255, 255, 255, 0.8); border-radius: 20px; padding: 2rem;">
+            <h2 class="section-title">In Memoriam</h2>
+            <div style="text-align: center; color: #4a5568; margin-bottom: 2rem;">
+                <p>Honoring those who have passed on but remain forever in our hearts and family legacy.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2rem; border-radius: 15px; text-align: center; border-left: 4px solid #6c757d;">
+                    <h3 style="color: #495057; margin-bottom: 1rem;">Ruby (Harrison) Williams</h3>
+                    <p style="color: #6c757d;">September 19, 1922 • October 29, 2017</p>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2rem; border-radius: 15px; text-align: center; border-left: 4px solid #6c757d;">
+                    <h3 style="color: #495057; margin-bottom: 1rem;">Pamela J. Harrison</h3>
+                    <p style="color: #6c757d;">February 4, 1944 • May 20, 2018</p>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2rem; border-radius: 15px; text-align: center; border-left: 4px solid #6c757d;">
+                    <h3 style="color: #495057; margin-bottom: 1rem;">Mr. Doc Graham, Jr.</h3>
+                    <p style="color: #6c757d;">February 22, 1929 - October 15, 2016<br>Daytona Beach, Florida</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="section">
+        <div class="login-section">
+            <h2 class="section-title">Member Login</h2>
+            <p style="color: #4a5568; margin-bottom: 2rem;">
+                Login to access the family directory, upload photos, and manage your family information.
+            </p>
+            
+            <div class="login-form">
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-input" placeholder="Enter your email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-input" placeholder="Enter your password">
+                    </div>
+                    
+                    <button type="submit" class="btn-primary" style="width: 100%; margin-bottom: 1rem;">
+                        <i class="fas fa-sign-in-alt" style="margin-right: 0.5rem;"></i>
+                        Login to Dashboard
+                    </button>
+                </form>
+                
+                <p style="color: #4a5568; margin-top: 1rem;">
+                    Don't have an account? 
+                    <a href="https://gensparkpublicblob.blob.core.windows.net/user-upload-image/page/tooluse_f94ZxF7YQDe_j0-HAfrtmg/harrison_family_heritage_improved_contrast.html#" style="color: #48bb78; font-weight: 500; text-decoration: none;" onclick="showRegistration()">
+                        Create Family Member Account
+                    </a>
+                </p>
+            </div>
+            
+            <div id="registration-form" class="hidden" style="margin-top: 2rem; max-width: 400px; margin-left: auto; margin-right: auto;">
+                <h3 style="text-align: center; color: #2d5a27; margin-bottom: 1.5rem;">Create Family Member Account</h3>
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-input" placeholder="Enter your first name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-input" placeholder="Enter your last name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-input" placeholder="Enter your email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Relationship to Harrison Family</label>
+                        <input type="text" class="form-input" placeholder="e.g., Descendant of John Rufus Jr.">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-input" placeholder="Create a password">
+                    </div>
+                    
+                    <button type="submit" class="btn-primary" style="width: 100%;">
+                        <i class="fas fa-user-plus" style="margin-right: 0.5rem;"></i>
+                        Create Account
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Toggle children function for family tree
+        function toggleChildren(childrenId) {
+            const childrenSection = document.getElementById(childrenId);
+            const parentCard = childrenSection.closest('.family-member-card');
+            
+            if (childrenSection.classList.contains('hidden')) {
+                childrenSection.classList.remove('hidden');
+                parentCard.classList.add('expanded');
+            } else {
+                childrenSection.classList.add('hidden');
+                parentCard.classList.remove('expanded');
+            }
+        }
+
+        // Show registration form
+        function showRegistration() {
+            const regForm = document.getElementById('registration-form');
+            regForm.classList.toggle('hidden');
+        }
+
+        // Add click event listeners to all expandable family cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const expandableCards = document.querySelectorAll('.family-member-card.expandable');
+            expandableCards.forEach(card => {
+                card.style.cursor = 'pointer';
+            });
+        });
+    </script>
+
+
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDqZ%2FujoMXEKvRUoTMkCA6BUL%2FqQeEFTRd26rXRPutG4O8oPJZoc2FRqgO4BT%2F%2BjSklILD%2BUtdh%2F68m5Fo2zq4MRe%2FqdEuKIqoykECiOG4qrlet0NdkBPddl6zknzrcAyKN3dn4eVKXfbqitiIJI22vlKkM%2FfqFsGumK7RxSuOT9qlDV7nnn1%2FVFSG96W2uvqj5w%2F%2B3S%2BRVA5TvaiNH%2BfUh1oVPwI%2BGFhXC6S3PUZT%2BMsbfWD8E9tvL0gXA%2BwqvqBTVwSHC4aPOpwpQaiwrzjOQ%2FQ82aG1%2BLa6KTBtQJC3gw3qzLzn6ORV1kUTKzwFtA%2BNNfSm1ot0VyYff5kVtg2%2FmRUkexn9b5%2Brfnoa6KRqIPeo%2BVWOCao8%2FlzhIeNxpyTC1bEVdd6Eu1rxUWpn%2B2lZfAhADNM1yMmRPxyoag%2Fa6mKmtdEqf4nGJlv3fu%2BxpgueaUiPNPd3ma%2FLKYgjEfLN%2Bw69iC54HOEHX%2FS4Pfi8JdhwegoDOLSkLa2iO%2FHqXuSzUaJyXUgiPGmCc2DJsmesl8rL%2FVZnLr8YAT7dDSmDufs";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDqZ/ujoMXEKvRUoTMkCA6BUL/qQeEFTRd26rXRPutG4O8oPJZoc2FRqgO4BT/+jSklILD+Utdh/68m5Fo2zq4MRe/qdEuKIqoykECiOG4qrlet0NdkBPddl6zknzrcAyKN3dn4eVKXfbqitiIJI22vlKkM/fqFsGumK7RxSuOT9qlDV7nnn1/VFSG96W2uvqj5w/+3S+RVA5TvaiNH+fUh1oVPwI+GFhXC6S3PUZT+MsbfWD8E9tvL0gXA+wqvqBTVwSHC4aPOpwpQaiwrzjOQ/Q82aG1+La6KTBtQJC3gw3qzLzn6ORV1kUTKzwFtA+NNfSm1ot0VyYff5kVtg2/mRUkexn9b5+rfnoa6KRqIPeo+VWOCao8/lzhIeNxpyTC1bEVdd6Eu1rxUWpn+2lZfAhADNM1yMmRPxyoag/a6mKmtdEqf4nGJlv3fu+xpgueaUiPNPd3ma/LKYgjEfLN+w69iC54HOEHX/S4Pfi8JdhwegoDOLSkLa2iO/HqXuSzUaJyXUgiPGmCc2DJsmesl8rL/VZnLr8YAT7dDSmDufs";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="./harrison_family_heritage_files/notice_dialog.js.download"></script>
+    <input type="hidden" id="hippowiz-ass-injected" value="true"><div id="toast-container" style="color-scheme: initial; forced-color-adjust: initial; mask: initial; math-depth: initial; position: fixed; position-anchor: initial; text-size-adjust: initial; appearance: initial; color: initial; font: initial; font-palette: initial; font-synthesis: initial; position-area: initial; text-orientation: initial; text-rendering: initial; text-spacing-trim: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; align-items: flex-end; place-self: initial; alignment-baseline: initial; anchor-name: initial; anchor-scope: initial; animation-composition: initial; animation: initial; app-region: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; baseline-source: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; bottom: initial; box-decoration-break: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-block-size: initial; contain-intrinsic-size: initial; contain-intrinsic-inline-size: initial; container: initial; content: initial; content-visibility: initial; corner-shape: initial; corner-block-end-shape: initial; corner-block-start-shape: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: flex; dominant-baseline: initial; dynamic-range-limit: initial; empty-cells: initial; field-sizing: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-direction: column; flex-wrap: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphenate-character: initial; hyphenate-limit-chars: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; initial-letter: initial; inline-size: initial; inset-block: initial; inset-inline: initial; interpolate-size: initial; isolation: initial; justify-items: initial; left: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask-type: initial; math-shift: initial; math-style: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; object-view-box: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-block: initial; overflow-clip-margin: initial; overflow-inline: initial; overflow-wrap: initial; overflow: initial; overlay: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position-try: initial; position-visibility: initial; print-color-adjust: initial; quotes: initial; r: initial; reading-flow: initial; reading-order: initial; resize: initial; right: 20px; rotate: initial; ruby-align: initial; ruby-position: initial; rx: initial; ry: initial; scale: initial; scroll-behavior: initial; scroll-initial-target: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-marker-group: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; scroll-timeline: initial; scrollbar-color: initial; scrollbar-gutter: initial; scrollbar-width: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-box: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-emphasis: initial; text-emphasis-position: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; text-wrap: initial; timeline-scope: initial; top: 20px; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; translate: initial; user-select: initial; vector-effect: initial; vertical-align: initial; view-timeline: initial; view-transition-class: initial; view-transition-name: initial; visibility: initial; border-spacing: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-user-drag: initial; white-space-collapse: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 9999;"></div><div id="voila-extension-app" data-v-app=""><div class="Voila_Extension" data-v-1b1d907a=""><!----><!----></div></div><div id="hv-extension-countdown" class="hv-extension-countdown"><div class="sc-bcXHqe khsqwT"><div class="sc-gswNZR pmzdc"><div class="sc-dkrFOg jsSskX">3</div></div></div></div><input type="hidden" id="hvTabId" value="181111171"><input type="hidden" id="hvWindowId" value="181110132"><button class="copy-to-clipboard" id="hvCopyToClipboard" style="display: none;"></button></body><div id="aiFabShadowRoot" style="display: block;"><template shadowrootmode="open"><!-- sidePanelButton.html -->
+
+<style>
+    .acrobat-button-container {
+        position: fixed;
+        right: 0;
+        bottom: 36px;
+        z-index: 2147483646;
+        visibility: visible !important;
+        pointer-events: all;
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    @media print {
+        .acrobat-button-container {
+            display: none !important;
+        }
+    }
+
+    .acrobat-button {
+        position: relative;
+        background: white;
+        display: flex;
+        align-items: center;
+        pointer-events: all;
+        touch-action: none;
+        box-shadow: 0px 2px 8px 0px #00000029;
+        height: 34px;
+        width: 34px;
+        border: 1px solid transparent;
+        background-clip: padding-box, border-box;
+        background-origin: border-box;
+        background-image: linear-gradient(white, white),
+                        linear-gradient(95.85deg, #D73220 0%, #D92361 33%, #7155FA 100%);
+        border-radius: 18px;
+        justify-content: right;
+        margin-right: 34px;
+    }
+
+    .acrobat-button-container-transparent {
+        opacity: 0.4 !important;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .acrobat-button-container-transparent:hover,
+    .acrobat-button-container-transparent:focus,
+    .acrobat-button-container-transparent:active {
+        opacity: 1;
+    }
+
+    .acrobat-button > svg {
+        flex-shrink: 0;
+        margin: 4px 5px 5px 5px;
+        width: 22px;
+        height: 22px;
+        pointer-events: none;
+        fill: #b40000;
+    }
+    .acrobat-button:has(.close-btn.open),
+    .expand-acrobat-button {
+        width: 64px;
+    }
+
+    .disabled {
+        background: #B1B1B1;
+    }
+
+    .tooltip-text {
+        width: 160px;
+        visibility: hidden;
+        opacity: 0;
+        background-color: #FFFFFF;
+        color: #292929;
+        border-radius: 7px;
+        padding: 4px 1px 5px 9px;
+        position: absolute;
+        z-index: 1;
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-right: 10px;
+        transition: opacity 0.3s, visibility 0s linear 2s;
+        font-size: 12px;
+        line-height: 15px;
+        font-family: 'adobe-clean', Adobe Clean, sans-serif;
+        filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.12));
+    }
+
+    .tooltip-text::after {
+       content: '';
+       position: absolute;
+       top: 50%;
+       left: 100%;
+       transform: translateY(-50%);
+       border-width: 6px;
+       border-style: solid;
+       border-color: transparent transparent transparent #fff;
+    }
+
+    .acrobat-button:hover ~ .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 1s;
+        line-height: 1.5;
+        font-family: 'adobe-clean', Adobe Clean, sans-serif;
+    }
+
+    .show-tooltip {
+        visibility: visible;
+        opacity: 1;
+        line-height: 1.5;
+        font-family: 'adobe-clean', Adobe Clean, sans-serif;
+        transition: opacity 0.3s;
+    }
+
+    .close-btn {
+        position: relative;
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .close-btn svg {
+        fill: #464646;
+    }
+
+    .close-btn.showCloseButton {
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        width: 22px;
+        height: 22px;
+        padding: 2px;
+        margin: 4px;
+    }
+
+    .fab-view-settings-dialog {
+        display: none;
+        position: absolute;
+        bottom: 34px;
+        right: 0px;
+        z-index: 1;
+    }
+
+    .close-btn:hover {
+        background: #E6E6E6;
+        border-radius: 50%;
+    }
+
+    .fab-view-settings-dialog.showDialog {
+        display: block;
+    }
+    .close-btn .burger-icon {
+        display: inline;
+        margin-bottom: 2px;
+    }
+    .close-btn .close-icon {
+        display: none;
+    }
+    .close-btn.open .burger-icon {
+        display: none;
+    }
+    .close-btn.open .close-icon {
+        display: inline;
+    }
+    .tooltip-text .tooltip-text-content {
+        font-weight: bold;
+    }
+    .tooltip-text .tooltip-sub-text-text {
+        font-style: italic;
+        font-size: 11px;
+    }
+    .draggable-handle {
+        display: none;
+        position: absolute;
+        right: 17px;
+        cursor: grab;
+    }
+    .draggable-handle-visible {
+        display: flex;
+    }
+    .acrobat-button:hover {
+        cursor: pointer;
+    }
+</style>
+
+<div class="acrobat-button-container">
+    <div class="acrobat-button" role="button">
+        <div class="close-btn" role="button" aria-label="Show Acrobat AI FAB View Settings">
+            <svg class="close-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0_8552_7892" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
+                    <path d="M7.82482 7.00034L10.6374 4.18778C10.7893 4.03592 10.7893 3.78969 10.6374 3.63783L10.3625 3.36292C10.2106 3.21106 9.96446 3.21106 9.81255 3.36292L6.99995 6.17548L4.18734 3.36292C4.03543 3.21106 3.78933 3.21106 3.63743 3.36292L3.36247 3.63783C3.21056 3.78969 3.21056 4.03592 3.36247 4.18778L6.17507 7.00034L3.36247 9.81295C3.21056 9.96481 3.21056 10.2111 3.36247 10.3629L3.63743 10.6378C3.78933 10.7897 4.03543 10.7897 4.18734 10.6378L6.99995 7.82526L9.81255 10.6378C9.96446 10.7897 10.2106 10.7897 10.3625 10.6378L10.6374 10.3629C10.7893 10.2111 10.7893 9.96481 10.6374 9.81295L7.82482 7.00034Z" fill="#222222"></path>
+                </mask>
+                <g mask="url(#mask0_8552_7892)">
+                    <rect width="14" height="14"></rect>
+                </g>
+            </svg>
+            <svg class="burger-icon" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0_12188_28876" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="15" height="14">
+                <path d="M15.1285 12.8008H6.37852C6.08867 12.8008 5.85352 13.0359 5.85352 13.3258C5.85352 13.6156 6.08867 13.8508 6.37852 13.8508H15.1285C15.4184 13.8508 15.6535 13.6156 15.6535 13.3258C15.6535 13.0359 15.4184 12.8008 15.1285 12.8008Z" fill="#292929"></path>
+                <path d="M6.37852 6.85078H15.1285C15.4184 6.85078 15.6535 6.61562 15.6535 6.32578C15.6535 6.03594 15.4184 5.80078 15.1285 5.80078H6.37852C6.08867 5.80078 5.85352 6.03594 5.85352 6.32578C5.85352 6.61562 6.08867 6.85078 6.37852 6.85078Z" fill="#292929"></path>
+                <path d="M15.1285 9.30078H6.37852C6.08867 9.30078 5.85352 9.53594 5.85352 9.82578C5.85352 10.1156 6.08867 10.3508 6.37852 10.3508H15.1285C15.4184 10.3508 15.6535 10.1156 15.6535 9.82578C15.6535 9.53594 15.4184 9.30078 15.1285 9.30078Z" fill="#292929"></path>
+                </mask>
+                <g mask="url(#mask0_12188_28876)">
+                <rect x="3.75391" y="3" width="14" height="14" fill="#464646"></rect>
+                </g>
+            </svg>
+            <div class="fab-view-settings-dialog"></div>
+        </div>
+        <svg id="ImportedIcons" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+            <path d="m6.21661,16.39534c-1.35034,2.23499-2.67933,3.64758-3.45616,3.64758-.12795.00539-.25276-.04056-.34667-.12762-.14818-.12483-.21629-.32065-.17758-.5105.14764-.80079,1.68628-1.95576,3.98041-3.00946Zm6.49075-3.19656c-.57993.12528-1.1792.27056-1.78689.43544-.4366.11893-.87951.24862-1.32255.38729.23541-.4949.4515-.98554.6398-1.452.24831-.6159.48156-1.232.69564-1.83456.18831.30354.38304.59839.58195.88207.39375.56092.81787,1.09736,1.19205,1.58176Zm-2.99822-10.63684c.08814-.18001.26644-.29855.46653-.31016.51149,0,.62276.63358.62276,1.1638-.06787,1.25011-.29293,2.48669-.66988,3.68055-.85816-2.33642-.73831-3.97319-.41942-4.53419h.00001Zm9.60883,12.20974c-.13359.4402-.56725.71808-1.023.6555-.15594-.00061-.3112-.02054-.46224-.05933-1.07834-.28263-2.07953-.80363-2.92976-1.5246.71719-.11267,1.44198-.17001,2.16797-.17149.48402-.00813.96771.03017,1.44442.11438.43447.09244.92449.33873.80261.98554Zm1.45515-1.0537c-1.01837-.83309-2.33117-1.21735-3.63802-1.06487-.98482.00983-1.96732.09739-2.93836.26187-.62354-.62512-1.19003-1.30467-1.69272-2.03054-.38314-.54455-.73672-1.10931-1.05923-1.69182.54287-1.57384.85986-3.2167.94151-4.87953,0-1.49369-.57564-3.09087-2.19132-3.09087-.56296.01952-1.07528.33036-1.35261.82066-.68906,1.2165-.41298,3.72002.68705,6.26756-.38306,1.17041-.80046,2.31007-1.31196,3.57265-.43687,1.08123-.93191,2.13803-1.48293,3.16579-1.64775.68213-5.15115,2.33642-5.48494,4.16456-.10306.53569.0783,1.08658.47942,1.45629.39145.35044.90217.53779,1.42737.5236,2.10998,0,4.21366-3.003,5.63044-5.58789.80461-.2816,1.62641-.53671,2.44391-.759.8967-.24407,1.76345-.44427,2.58082-.594,1.39014,1.39224,3.25004,2.21523,5.21531,2.30773,1.36751,0,1.87887-.60942,2.06516-1.122.20733-.5893.08589-1.24438-.3189-1.72019Z" fill="var(--iconRed, #d31510)" fill-rule="evenodd"></path>
+        </svg>
+    </div>
+    <div class="draggable-handle">
+        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.60039 13.0699C5.26313 13.0699 5.80039 12.5327 5.80039 11.8699C5.80039 11.2072 5.26313 10.6699 4.60039 10.6699C3.93765 10.6699 3.40039 11.2072 3.40039 11.8699C3.40039 12.5327 3.93765 13.0699 4.60039 13.0699Z" fill="#292929"></path>
+            <path d="M4.60039 8.27109C5.26313 8.27109 5.80039 7.73384 5.80039 7.07109C5.80039 6.40835 5.26313 5.87109 4.60039 5.87109C3.93765 5.87109 3.40039 6.40835 3.40039 7.07109C3.40039 7.73384 3.93765 8.27109 4.60039 8.27109Z" fill="#292929"></path>
+            <path d="M4.60039 3.47031C5.26313 3.47031 5.80039 2.93305 5.80039 2.27031C5.80039 1.60757 5.26313 1.07031 4.60039 1.07031C3.93765 1.07031 3.40039 1.60757 3.40039 2.27031C3.40039 2.93305 3.93765 3.47031 4.60039 3.47031Z" fill="#292929"></path>
+            <path d="M9.4002 13.0699C10.0629 13.0699 10.6002 12.5327 10.6002 11.8699C10.6002 11.2072 10.0629 10.6699 9.4002 10.6699C8.73745 10.6699 8.2002 11.2072 8.2002 11.8699C8.2002 12.5327 8.73745 13.0699 9.4002 13.0699Z" fill="#292929"></path>
+            <path d="M9.4002 8.27109C10.0629 8.27109 10.6002 7.73384 10.6002 7.07109C10.6002 6.40835 10.0629 5.87109 9.4002 5.87109C8.73745 5.87109 8.2002 6.40835 8.2002 7.07109C8.2002 7.73384 8.73745 8.27109 9.4002 8.27109Z" fill="#292929"></path>
+            <path d="M9.4002 3.47031C10.0629 3.47031 10.6002 2.93305 10.6002 2.27031C10.6002 1.60757 10.0629 1.07031 9.4002 1.07031C8.73745 1.07031 8.2002 1.60757 8.2002 2.27031C8.2002 2.93305 8.73745 3.47031 9.4002 3.47031Z" fill="#292929"></path>
+        </svg>  
+    </div>
+    <div class="tooltip-text">
+        <span id="tooltipTextEnabled" class="translate tooltip-text-content">Get summaries and key insights using AI Assistant</span>
+        <span id="tooltipTextSubText" class="translate tooltip-sub-text-text">powered by Adobe Acrobat</span>
+    </div>
+</div>
+</template></div><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
